@@ -46,17 +46,17 @@ public class BOJ_1004_어린왕자 {
 	//행성 내부에 있는가
 	private static int isInPlanet(int cx, int cy, int r) {
 		boolean startInside = Math.pow(startX-cx, 2) + Math.pow(startY-cy, 2) < Math.pow(r, 2);
-        boolean destInside = Math.pow(destX-cx, 2) + Math.pow(destY-cy, 2) < Math.pow(r, 2);
-        
-        // 출발점과 도착점이 모두 원 안에 있는 경우, 통과하지 않음
-        if (startInside && destInside) {
-            return 0;
-        }
-        // 하나만 원 안에 있는 경우 카운트 증가
-        else if (startInside || destInside) {
-            return 1;
-        }
-        
-        return 0;
+	        boolean destInside = Math.pow(destX-cx, 2) + Math.pow(destY-cy, 2) < Math.pow(r, 2);
+	        
+	        // 출발점과 도착점이 모두 원 안에 있는 경우, 통과하지 않음
+	        if (startInside && destInside) {
+	            return 0;
+	        }
+	        // 하나만 원 안에 있는 경우 카운트 증가
+	        else if (startInside || destInside) {
+	            return 1;
+	        }
+	        
+	        return 0;
 	}
 }
