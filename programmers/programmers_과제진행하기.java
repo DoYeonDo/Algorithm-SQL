@@ -10,7 +10,7 @@ class Solution {
             this.remainMinute = remainMinute;
         }
     }
-    //잠시 멈춘 과제를 저장하고 있는 큐
+    //잠시 멈춘 과제를 저장하고 있는 스택
     static Stack<StopPlan> stack = new Stack<>();
     
     public String[] solution(String[][] plans) {
