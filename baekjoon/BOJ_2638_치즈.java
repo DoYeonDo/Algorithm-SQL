@@ -90,29 +90,29 @@ public class BOJ_2638_치즈 {
 			tmp[row] = map[row].clone();
 		
 		boolean[][] visited = new boolean[N][M];
-        Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[]{0, 0});
-        visited[0][0] = true;
-        tmp[0][0] = -1; 
-
-        while (!queue.isEmpty()) {
-            int[] cur = queue.poll();
-            int x = cur[0];
-            int y = cur[1];
-
-            for (int d = 0; d < 4; d++) {
-                int nx = x + dx[d];
-                int ny = y + dy[d];
-
-                if (nx >= 0 && nx < N && ny >= 0 && ny < M && !visited[nx][ny]) {
-                    if (tmp[nx][ny] <= 0) {
-                        visited[nx][ny] = true;
-                        tmp[nx][ny] = -1;
-                        queue.offer(new int[]{nx, ny});
-                    }
-                }
-            }
-        }
+	        Queue<int[]> queue = new LinkedList<>();
+	        queue.offer(new int[]{0, 0});
+	        visited[0][0] = true;
+	        tmp[0][0] = -1; 
+	
+	        while (!queue.isEmpty()) {
+	            int[] cur = queue.poll();
+	            int x = cur[0];
+	            int y = cur[1];
+	
+	            for (int d = 0; d < 4; d++) {
+	                int nx = x + dx[d];
+	                int ny = y + dy[d];
+	
+	                if (nx >= 0 && nx < N && ny >= 0 && ny < M && !visited[nx][ny]) {
+	                    if (tmp[nx][ny] <= 0) {
+	                        visited[nx][ny] = true;
+	                        tmp[nx][ny] = -1;
+	                        queue.offer(new int[]{nx, ny});
+	                    }
+	                }
+	            }
+	        }
 		
 		return tmp;
 	}
