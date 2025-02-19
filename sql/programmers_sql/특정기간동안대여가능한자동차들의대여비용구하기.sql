@@ -10,8 +10,6 @@ FROM
             SELECT car_id
             FROM car_rental_company_rental_history
             WHERE start_date <= '2022-11-30' AND end_date >= '2022-11-01'
-            GROUP BY car_id
-            ORDER BY car_id
         ) AND car_type IN('세단', 'SUV')
     ) AS tmp
     ON plan.car_type = tmp.car_type
